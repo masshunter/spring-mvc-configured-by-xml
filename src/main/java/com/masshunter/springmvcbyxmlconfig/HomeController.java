@@ -11,7 +11,7 @@ public class HomeController {
 	@RequestMapping("/")
 	public ModelAndView home() {
 		ModelAndView mv = new ModelAndView();
-		mv.setViewName("/WEB-INF/pages/index.jsp");
+		mv.setViewName("index");
 		
 		return mv;
 	}
@@ -19,7 +19,7 @@ public class HomeController {
 	@RequestMapping("/calc")
 	public ModelAndView calc(@RequestParam("n1") int n1, @RequestParam("n2") int n2) {
 		ModelAndView mv = new ModelAndView();
-		mv.setViewName("/WEB-INF/pages/result.jsp");
+		mv.setViewName("result");
 		
 		int result = n1 + n2;
 		mv.addObject("result", result);
